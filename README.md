@@ -7,6 +7,17 @@
 - 使用了ollama的`http://localhost:11434/api/chat`提供服务，流式返回数据
   
 - 使用`vue3+tdesign` 来完成页面的渲染和布局。
+  
+-  默认使用的model是`llama3.2:latest`，可以更加需要自己更换为`deepseek-r1:1.5b`或`qwen`等。
+  
+  
+```JavaScript
+  body: JSON.stringify({
+      messages, // 消息列表
+      model: 'llama3.2:latest', // 模型
+      stream: true, // 流式
+    }),
+ ```
 
 
 ## 项目运行
